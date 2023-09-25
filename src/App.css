@@ -1,0 +1,42 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+}
+
+p {
+  max-width: 300px;
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.error {
+  display: block;
+  color: red;
+}
+
+textarea {
+  width: 350px;
+  height: 150px;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
