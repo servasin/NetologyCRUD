@@ -17,7 +17,16 @@ app.use(function (req, res, next) {
   next();
 });
 
-const notes = [];
+const notes = [
+  {
+    id: 'e1',
+    content: "То, что было введено в поле ввода"
+  },
+  {
+    id: 'e2',
+    content: "То, что было введено в поле ввода"
+  },
+];
 let nextId = 1;
 
 app.get("/notes", (req, res) => {

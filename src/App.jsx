@@ -3,7 +3,8 @@ import Notes from './components/Notes';
 import NewNote from './components/NewNote';
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import server from './backend/server'
+import axios from 'axios';
+// import server from './backend/server'
 
 
 function App() {
@@ -21,11 +22,18 @@ function App() {
 
 // console.log(server);
 
-  useEffect( async () => {
-    const {data} = await app.get('/notes');
-    setTodos(data);
-  }, []);
+  // useEffect( async () => {
+  //   const {data} = await app.get('/notes');
+  //   setTodos(data);
+  // }, []);
 
+  axios.get('http://localhost:7070/notes')
+  .then(response => {
+    console.log(response);
+  })
+  .catch(error => {
+    console.log(error);
+  });
 
   function addNote(note) {
     note.id = uuidv4();
